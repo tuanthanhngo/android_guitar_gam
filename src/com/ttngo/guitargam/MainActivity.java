@@ -1,15 +1,27 @@
 package com.ttngo.guitargam;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.ListActivity;
 import android.os.Bundle;
-import android.app.Activity;
 import android.view.Menu;
 
-public class MainActivity extends Activity {
+public class MainActivity extends ListActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+
+		// create data list
+		// TODO: get from db / server?
+		List<SongListItem> songList = new ArrayList<SongListItem>();
+		songList.add(new SongListItem(1, "song 1"));
+		songList.add(new SongListItem(2, "song 2"));
+		songList.add(new SongListItem(3, "song 3"));
+		
+		// build view with list addapter
+		setListAdapter(new SongListAdapter(this, songList));
 	}
 
 	@Override
