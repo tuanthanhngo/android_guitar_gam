@@ -3,6 +3,8 @@ package com.ttngo.guitargam;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.ttngo.guitargam.data.SongListItem;
+
 import android.app.ListActivity;
 import android.os.Bundle;
 import android.view.Menu;

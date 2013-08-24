@@ -1,8 +1,11 @@
-package com.ttngo.guitargam;
+package com.ttngo.guitargam.data;
 
 public class SongListItem {
 	private int id;
 	private String name;
+
+	public SongListItem() {
+	}
 
 	public SongListItem(int id, String name) {
 		this.id = id;

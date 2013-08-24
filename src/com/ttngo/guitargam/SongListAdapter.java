@@ -2,6 +2,8 @@ package com.ttngo.guitargam;
 
 import java.util.List;
 
+import com.ttngo.guitargam.data.SongListItem;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
