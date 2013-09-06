@@ -7,21 +7,21 @@ import android.test.ActivityUnitTestCase;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 
-public class MainActivityTest extends ActivityTestCase {
+public class MainActivityUnitTest extends ActivityUnitTestCase<MainActivity> /*ActivityTestCase*/ {
 
 	private MainActivity activity;
 	
-	public MainActivityTest() {
-	    super();
+	public MainActivityUnitTest() {
+	    super(MainActivity.class);
 	  }
 
 	@Override
 	  protected void setUp() throws Exception {
-//	    super.setUp();
-//	    Intent intent = new Intent(getInstrumentation().getTargetContext(),
-//	        MainActivity.class);
-//	    startActivity(intent, null, null);
-//	    activity = getActivity();
+	    super.setUp();
+	    Intent intent = new Intent(getInstrumentation().getTargetContext(),
+	        MainActivity.class);
+	    startActivity(intent, null, null);
+	    activity = getActivity();
 	  }
 	
 	  @SmallTest
@@ -46,13 +46,13 @@ public class MainActivityTest extends ActivityTestCase {
 	    // TouchUtils cannot be used, only allowed in 
 	    // InstrumentationTestCase or ActivityInstrumentationTestCase2 
 	  
-//	    // Check the intent which was started
-//	    Intent triggeredIntent = getStartedActivityIntent();
-//	    assertNotNull("Intent was null", triggeredIntent);
-//	    String data = triggeredIntent.getExtras().getString("URL");
-//
-//	    assertEquals("Incorrect data passed via the intent",
-//	        "http://www.vogella.com", data);
+	    // Check the intent which was started
+	    Intent triggeredIntent = getStartedActivityIntent();
+	    assertNotNull("Intent was null", triggeredIntent);
+	    String data = triggeredIntent.getExtras().getString("URL");
+
+	    assertEquals("Incorrect data passed via the intent",
+	        "http://www.vogella.com", data);
 	  }
 
 	  @Override

@@ -8,6 +8,7 @@ import com.ttngo.guitargam.data.SongListItem;
 import android.app.ListActivity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
 
 public class MainActivity extends ListActivity {
 
@@ -33,4 +34,9 @@ public class MainActivity extends ListActivity {
 		return true;
 	}
 
+	public void onClick(View view) {
+//	    Intent intent = new Intent(this, SecondActivity.class);
+//	    intent.putExtra("URL", "http://www.vogella.com");
+//	    startActivity(intent);
+	}
 }

@@ -85,7 +85,7 @@ public class SongDAO {
 	 * @param song
 	 * @return
 	 */
-	public int add(SongDetailItem song) {
+	public SongDetailItem add(final SongDetailItem song) {
 		// create data
 		ContentValues contentValues = new ContentValues();
 		contentValues.put("name", song.getName());
@@ -100,7 +100,10 @@ public class SongDAO {
 		Cursor cursor = db.query(TABLE_NAME, columns, "rowid = ?", params, null, null, null);
 
 		// return
-		int ret = cursor.getInt(cursor.getColumnIndex("_id"));
+		int addId = cursor.getInt(cursor.getColumnIndex("_id"));
+		SongDetailItem ret = song;
+		ret.setId(addId);
+
 		return ret;
 	}
 
