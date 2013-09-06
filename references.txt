@@ -1,0 +1,7 @@
+- GUI effect:
+https://github.com/shehaaz/EffectiveNavigation
+	pending
+https://github.com/iobee/flipboard-flip-effect-for-android-
+	pending
+
+- Database:
